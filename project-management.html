@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Management in R</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Karthik Ram Berkeley Institute for Data Science University of California, Berkeley" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="my-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: left, middle, inverse, title-slide
+
+# Project Management in R
+### Karthik Ram<br><span style="font-size: 50%;">Berkeley Institute for Data Science<br>University of California, Berkeley</span>
+
+---
+
+
+layout: true
+  
+&lt;div class="my-footer"&gt;&lt;span&gt;karthik.github.io/prm • @_inundata&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+
+
+
+
+# Project management in R
+
+### Effective project management can save you a lot of headache when working on multiple projects
+
+- At the very least, use the Projects feature of RStudio
+- It will allow you to work on multiple projects simultaneously
+
+
+
+---
+
+class: inverse, center, middle
+
+## TODAY'S GOAL
+
+Demonstrate several R tools &amp; practices which can help us not only improve our scientific rigor, but make our lives more pleasant throughout the course of a project.
+
+
+---
+
+# Packages that help you set up research projects
+
+- [ProjectTemplate](http://projecttemplate.net/)
+- [makeProject](https://cran.r-project.org/web/packages/makeProject/index.html)
+- [prodigenr](https://cran.r-project.org/web/packages/prodigenr/index.html)
+- [rrtools](https://github.com/benmarwick/rrtools)
+- [another tool](https://)
+
+---
+
+# Project template
+
+Create a new project with `create.project('letters')`.
+
+---
+
+# Use Rstudio's native projects feature
+
+![rstudio](https://i.imgur.com/KcdsB8h.png)
+
+---
+    </textarea>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"countIncrementalSlides": false,
+"highlightLines": true,
+"highlightStyle": "solarized-dark"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
