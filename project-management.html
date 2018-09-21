@@ -54,7 +54,7 @@ Demonstrate several R tools &amp; practices which can help us not only improve o
 - [makeProject](https://cran.r-project.org/web/packages/makeProject/index.html)
 - [prodigenr](https://cran.r-project.org/web/packages/prodigenr/index.html)
 - [rrtools](https://github.com/benmarwick/rrtools)
-- [another tool](https://)
+
 
 ---
 
@@ -67,6 +67,88 @@ Create a new project with `create.project('letters')`.
 # Use Rstudio's native projects feature
 
 ![rstudio](https://i.imgur.com/KcdsB8h.png)
+
+---
+
+# makeProject
+
+Creates an empty package framework for the LCFD format (Load Clean Function Do) structure.
+
+```
+makeProject(name = "myProject", path = getwd(), force = FALSE,
+author = "Your Name", email = "yourfault@somewhere.net")
+```
+
+Will create `main.R`, `data`, `code`, `load.R`, `clean.R`, `func.R`, `do.R`.
+
+---
+
+# prodigenr: Research Project Directory Generator
+
+&gt; *Are you an academic researcher who often writes up abstracts for conferences or submits manuscripts to journals? Do you often have to make slides or posters for presentations? Is your usual workflow to copy a previous project and start replacing the old text for the new text? This R package was designed with you in mind!*
+
+
+```r
+library(prodigenr)
+template_list
+```
+
+```
+## [1] "abstract"   "manuscript" "poster"     "slides"
+```
+
+---
+
+# Create a new project directory: `prodigenr`
+
+```
+path &lt;- tempdir()
+setup_project("HeartDiseaseExercise", path)
+```
+
+```
+.
+├── R
+│   ├── README.md
+│   ├── fetch_data.R
+│   └── setup.R
+├── data
+│   └── README.md
+├── doc
+│   └── README.md
+├── .Rbuildignore
+├── .gitignore
+├── DESCRIPTION
+├── HeartDiseaseExercise.Rproj
+└── README.md
+
+3 directories, 10 files
+```
+
+
+---
+
+# Then add project type
+
+```
+create_abstract()
+create_poster()
+```
+
+---
+# Workflow with prodigenr
+
+A typical workflow, which is also outlined in the README.md of the created project, would be to:
+
+1. Write up your analysis and associated written explanations of the results, as you would for any research project, in the abstract, poster, slides, or manuscript .Rmd (R Markdown) file in the doc/ folder.
+
+2. Any piece of code you use more than once or is fairly complex, convert it into a function. Put this new function into a file (or a functions.R file) in the R/ directory. Load that function using devtools::load_all() (Ctrl-Shift-L).
+
+3. Fetch and wrangle your data in the R/fetch_data.R. You can access the data using the devtools::load_all() function.
+
+4. Create more Rmd files in the doc/ folder to add analyses that will supplement the main document or that are exploratory.
+
+5. Knit the .Rmd file in doc/. You now have your final abstract, poster, slides, or manuscript to use for your research.
 
 ---
     </textarea>
